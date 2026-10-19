@@ -19,7 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-This plugin drives the Hermes-agent Android PC companion
-(https://github.com/HenWorks/Hermes-agent-android-PC-companion-app), which is
-licensed separately under AGPL-3.0 and is NOT included in this repository.
