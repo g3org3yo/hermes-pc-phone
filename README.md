@@ -39,8 +39,18 @@ it and uses it.
 hermes plugins install g3org3yo/hermes-pc-phone
 ```
 
-Then reload the desktop UI: `Ctrl+K` → **Reload desktop plugins** (or just restart the app).
+Then restart the backend and the UI:
+
+```bash
+hermes gateway restart          # the /api/plugins/pc-phone/ routes mount with the backend
+```
+
+and reload the desktop UI: `Ctrl+K` → **Reload desktop plugins** (or just restart the app).
 The chip appears at the bottom right of the status bar, next to the Dashboard chip.
+
+> If the install finished with *"stays installed but disabled"* (another plugin in your profile
+> demands a newer Hermes than you run), enable it yourself once that is resolved:
+> `hermes plugins enable pc-phone`.
 
 <details>
 <summary>Manual install (no <code>hermes plugins</code>)</summary>
