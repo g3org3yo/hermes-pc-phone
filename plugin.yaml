@@ -1,0 +1,9 @@
+name: pc-phone
+version: 1.1.0
+manifest_version: 1
+kind: standalone
+description: "PC - Phone — a bottom statusbar chip that turns the PC↔phone link on or off with one click. Drives the Hermes-agent Android PC companion (mesh broker), with first-run setup built in."
+author: Γιώργος Καυκάς
+license: MIT
+provides_tools: []
+provides_hooks: []
