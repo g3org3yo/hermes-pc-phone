@@ -3,11 +3,11 @@
 The real work lives in two other places:
 
 * ``dashboard/plugin_api.py`` — backend routes, mounted by the gateway at
-  ``/api/plugins/mesh-button/`` at server start (the plugin must be listed in
+  ``/api/plugins/pc-phone/`` at server start (the plugin must be listed in
   ``plugins.enabled`` for the import to happen at all). It owns the broker
   process: status / start / stop / restart / pairing.
 * ``desktop/plugin.js`` — the desktop UI half (statusbar chip + sidebar page),
-  hot-loaded from ``$HERMES_HOME/desktop-plugins/mesh-button/``.
+  hot-loaded from ``$HERMES_HOME/desktop-plugins/pc-phone/``.
 
 No tools, no hooks — but the loader treats a module without ``register()`` as a
 broken plugin, so the no-op below keeps the manifest honest.

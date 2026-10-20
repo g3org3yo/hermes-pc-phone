@@ -1,6 +1,6 @@
 """Mesh Button — backend routes.
 
-Mounted by the Hermes gateway at ``/api/plugins/mesh-button/`` and reached from
+Mounted by the Hermes gateway at ``/api/plugins/pc-phone/`` and reached from
 the desktop half (``desktop/plugin.js``) through ``ctx.rest()``.
 
 WHY A BACKEND

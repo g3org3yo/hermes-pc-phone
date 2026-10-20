@@ -1,0 +1,11 @@
+{
+  "name": "pc-phone",
+  "label": "PC - Phone",
+  "description": "Backend for the PC - Phone statusbar chip: starts, stops and restarts the mesh broker and hands out the pairing console URL.",
+  "icon": "DeviceMobile",
+  "version": "1.1.1",
+  "tab": {
+    "hidden": true
+  },
+  "api": "plugin_api.py"
+}

@@ -96,6 +96,9 @@ or pair a different phone.
 * `desktop/plugin.js` — the statusbar chip and the page (plain ESM, `@hermes/plugin-sdk` only).
 * `dashboard/plugin_api.py` — the backend routes `/api/plugins/pc-phone/{status,log,start,stop,restart,pair,setup,setup/install,setup/log}`.
   The renderer cannot spawn processes, so every action goes through here.
+* `dashboard/manifest.json` — **required**: the Hermes backend only scans a plugin folder that ships
+  `dashboard/manifest.json`, and only mounts `api` (here `plugin_api.py`) as `/api/plugins/pc-phone/`.
+  Without it the chip loads but every call 404s (amber dot, "backend not loaded").
 * The broker is started exactly as the companion documents it:
   `python -u -m handoff.mesh_broker`, cwd = the companion clone, `HERMES_HOME` inherited.
 * Detection is **port-based** (`51379`, or `MESH_PORT`): an instance you started yourself — tray,
@@ -121,6 +124,7 @@ agent plugin (`<hermes home>/plugins/hermes-companion`).
 |---|---|
 | No chip after install | `Ctrl+K` → **Reload desktop plugins**; the folder is not watched |
 | Chip has an amber dot, "backend not loaded" | the page's **Restart backend** button (routes mount with the backend, not the UI) |
+| Chip stays grey, "backend not loaded", `/api/plugins/pc-phone/status` returns 404 | `dashboard/manifest.json` is missing (added in 1.1.1) — reinstall/update the plugin; then **Restart backend** |
 | "did not open its port within 10 s" | read `broker.log` in the page; usually a stale process holding 51379 |
 | Phone cannot pair | right-click the chip for a fresh QR — the window is 5 minutes, and the phone must be on the same LAN |
 | `ModuleNotFoundError: zeroconf` | the broker ran with the wrong interpreter — run setup again so the venv is rebuilt |
